@@ -1,19 +1,25 @@
 body {
-    font-family:'Arial', sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #e7e7e7;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    flex-direction: column;
+    padding: 10px;
 }
-.businessCard {
+
+.businessCard, .sociallinks, .bio {
     box-shadow: 0 0 10px #ccc;
     background-color: rgb(197, 167, 131);
     padding: 20px;
     width: 300px;
     text-align: center;
+    margin: 10px 0;
+    border-radius: 10px;
 }
+
 .profile-photo {
     width: 100px;
     height: auto;
@@ -22,34 +28,35 @@ body {
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
 }
+
 h1, h2, h3 {
     color: #333;
 }
+
 p, a {
     color: #555;
     font-size: 16px;
     text-decoration: none;
 }
+
 a:hover {
     text-decoration: underline;
 }
+
+/* Responsive Design */
 @media only screen and (max-width: 600px) {
-    .businessCard {
-        width: 90%;
-        padding: 10px;
+    body {
+        height: auto;
+        padding: 20px;
     }
-}
-.sociallinks {
-    box-shadow: 0 0 10px #ccc;
-    background-color: rgb(197, 167, 131);
-    padding: 20px;
-    width: 300px;
-    text-align: center;
-}
-.bio {
-    box-shadow: 0 0 10px #ccc;
-    background-color: rgb(197, 167, 131);
-    padding: 20px;
-    width: 300px;
-    text-align: center;
+    .businessCard, .sociallinks, .bio {
+        width: 90%;
+        padding: 15px;
+    }
+    .profile-photo {
+        width: 80px;
+    }
+    p, a {
+        font-size: 14px;
+    }
 }
