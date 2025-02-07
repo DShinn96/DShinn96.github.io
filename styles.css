@@ -15,6 +15,8 @@ body {
     flex-wrap: wrap; /* Allow wrapping if the container width is too small */
     justify-content: center; /* Center the content horizontally */
     align-items: flex-start; /* Align the content to the top */
+    align-items: stretch; /* Ensure all items stretch to the same height */
+    width: 100%; /* Ensure the container takes full width */
 }
 
 .businessCard, .sociallinks, .bio {
@@ -26,6 +28,9 @@ body {
     text-align: center;
     margin: 10px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .profile-photo {
