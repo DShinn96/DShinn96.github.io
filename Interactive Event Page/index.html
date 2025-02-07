@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Conference Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="event-styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">TechConf 2024</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#details">Details</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#schedule">Schedule</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#speakers">Speakers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#register">Register</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section id="details" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-3">Event Details</h2>
+                <!-- event details here -->
+            </div>
+        </section>
+        <section id="schedule" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-3">Event Schedule</h2>
+                <!-- Schedule details here -->
+            </div>
+        </section>
+        <section id="speakers" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-3">Speakers</h2>
+                <!-- Speaker details here -->
+            </div>
+        </section>
+        <section id="register" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-3">Registration</h2>
+                    <form id="registration-form">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailAddress">Email Address</label>
+                            <input type="email" class="form-control" id="emailAddress" name="emailAddress" placeholder="Enter Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ticketType"> Ticket Type</label>
+                            <select class="form-control" name="ticketType" id="ticketType" required>
+                            <option value="">Select ticket type</option>
+                            <option value="general">General Admission</option>
+                            <option value="vip">VIP</option>
+                            <option value="student">Student</option>
+                        </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Registration</button>
+                    </form>
+                </div>
+        </section>
+        <section id="location" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-3">Location</h2>
+                <div id="map"></div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>(c) 2024 TechConf. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="event-scripts.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9fXKwgt0UJi6cFx0ZBdNHbajnFkbeCVE&callback=initMap" async defer></script>
+</body>
+</html>
