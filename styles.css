@@ -43,10 +43,6 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-.bio h2 {
-    margin-bottom: auto; /* Push the h2 to the top */
-}
-
 h1, h2, h3 {
     color: #333;
 }
