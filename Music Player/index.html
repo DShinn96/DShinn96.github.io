@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Player Interface</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="music-player" class="player">
+  <audio id="audio-element">
+      <source src="music/mixkit-hazy-after-hours-132.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+  </audio>
+  <div class="controls">
+      <button id="play-pause" onclick="togglePlayPause()">Play</button>
+      <button id="prev" onclick="playPreviousTrack()">Prev</button>
+      <button id="next" onclick="playNextTrack()">Next</button>
+  </div>
+  <div class="progress-bar">
+      <div id="progress" class="progress"></div>
+  </div>
+  <div class="playlist">
+      <ul id="playlist">
+          <li onclick="changeTrack('music/mixkit-hazy-after-hours-132.mp3', this)">Hazy After Hours</li>
+          <li onclick="changeTrack('music/mixkit-hip-hop-02-738.mp3', this)">Hip Hop</li>
+          <li onclick="changeTrack('music/mixkit-tech-house-vibes-130.mp3', this)">Tech House Vibes</li>
+          <!-- More songs can be added here -->
+      </ul>
+  </div>
+</div>
+
+<script src="scripts.js"></script>
+
+<footer>
+<p style="text-align: center;"><a href="https://mixkit.co/free-stock-music/">All Music Is Copyright Free</a></p>
+</footer>
+</body>
+</html>
