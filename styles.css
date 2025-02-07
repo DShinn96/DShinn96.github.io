@@ -10,16 +10,6 @@ body {
     padding: 10px;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-    flex-wrap: wrap;
-    max-width: 900px;
-    margin: auto;
-}
-
 .businessCard, .sociallinks, .bio {
     box-shadow: 0 0 10px #ccc;
     background-color: rgb(197, 167, 131);
