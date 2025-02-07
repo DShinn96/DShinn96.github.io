@@ -10,13 +10,20 @@ body {
     padding: 10px;
 }
 
+.container {
+    display: flex; /* Display content horizontally by default */
+    flex-wrap: wrap; /* Allow wrapping if the container width is too small */
+    justify-content: center; /* Center the content horizontally */
+    align-items: flex-start; /* Align the content to the top */
+}
+
 .businessCard, .sociallinks, .bio {
     box-shadow: 0 0 10px #ccc;
     background-color: rgb(197, 167, 131);
     padding: 20px;
     width: 300px;
     text-align: center;
-    margin: 10px 0;
+    margin: 10px;
     border-radius: 10px;
 }
 
@@ -43,24 +50,41 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Design */
+/* Mobile (up to 600px) */
 @media only screen and (max-width: 600px) {
     body {
         height: auto;
         padding: 20px;
     }
+
+    /* Stack the elements vertically on mobile */
     .container {
         flex-direction: column;
         align-items: center;
     }
+
     .businessCard, .sociallinks, .bio {
-        width: 90%;
+        width: 90%; /* Make each section occupy more space */
         padding: 15px;
     }
+
     .profile-photo {
-        width: 80px;
+        width: 80px; /* Reduce profile photo size */
     }
+
     p, a {
-        font-size: 14px;
+        font-size: 14px; /* Adjust font size for readability */
+    }
+}
+
+/* Desktop (above 600px) */
+@media only screen and (min-width: 601px) {
+    .container {
+        flex-direction: row; /* Align items horizontally on larger screens */
+    }
+
+    .businessCard, .sociallinks, .bio {
+        width: 300px; /* Maintain consistent width */
+        padding: 20px;
     }
 }
